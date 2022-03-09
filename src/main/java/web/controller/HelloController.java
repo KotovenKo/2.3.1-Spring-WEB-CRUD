@@ -1,6 +1,7 @@
 package web.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import java.util.List;
 @Controller
 public class HelloController {
 
-	@GetMapping(value = "/")
+
 	public String printWelcome(ModelMap model) {
 		List<String> messages = new ArrayList<>();
 		messages.add("Hello!");
@@ -19,6 +20,12 @@ public class HelloController {
 		messages.add("5.2.0 version by sep'19 ");
 		model.addAttribute("messages", messages);
 		return "index";
+	}
+
+
+	@GetMapping("/")
+	public String starter(Model model){
+		return "cars/starter";
 	}
 	
 }
