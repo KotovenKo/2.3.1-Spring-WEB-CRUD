@@ -5,6 +5,7 @@
     <title>New Car</title>
 </head>
 <body>
+<div style='text-align:center; width:100%'>
 
 <h2>Введите данные автомобиля.</h2>
 <br>
@@ -20,9 +21,14 @@
     <div style="color: red" th:if="${#fields.hasErrors('color')}" th:errors="*{color}">Name error</div>
     <br/>
     <br/>
+    <label for="color">Мощность </label>
+    <input type="text" th:field="*{power}" id="power"/>
+    <div style="color: red" th:if="${#fields.hasErrors('power')}" th:errors="*{power}">Name error</div>
+    <br/>
+    <br/>
     <input type="submit" value="Создать">
 
 </form>
-
+</div>
 </body>
 </html>

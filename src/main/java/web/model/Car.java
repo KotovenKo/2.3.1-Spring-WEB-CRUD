@@ -24,18 +24,28 @@ public class Car {
     @NotBlank(message = "Поле не должно быть пустым")
     private String color;
 
+
+    @Column(name = "power")
+//    @Size(min =2, message = "Минимум 2 символа")
+//    @NotBlank(message = "Поле не должно быть пустым")
+    private int power;
+
+
     public Car() {
     }
 
-    public Car(int id, String model, String color) {
+    public Car(int id, String model, String color, int power) {
         this.id = id;
         this.model = model;
         this.color = color;
+        this.power = power;
+
     }
 
-    public Car(String model, String color) {
+    public Car(String model, String color, int power) {
         this.model = model;
         this.color = color;
+        this.power = power;
     }
 
     public int getId() {
@@ -60,5 +70,13 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
     }
 }

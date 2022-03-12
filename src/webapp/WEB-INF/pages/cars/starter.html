@@ -5,25 +5,29 @@
     <title>Welcome</title>
 </head>
 <body>
-<h2>Добро пожаловать на страницу подбора автомобилей!!!</h2>
+<div style='text-align:center; width:100%'>
+<h2 >Добро пожаловать на страницу подбора автомобилей!!!</h2>
 <br/>
 
-Сколько машин вывести в список?
-<br/>
-<br/>
+<p>Сколько машин вывести в список?<p/>
+
+
 <form th:action="@{/cars/carbycounter}">
     <input type="text" th:name="counter"/>
     <input type="submit"/>
 </form>
 <br>
 
-Можно вывести
-<a href="/cars"> ВЕСЬ СПИСОК МАШИН </a>
-<br>
-<br>
-Либо можно  <a href="/cars/new"> СОЗДАТЬ НОВУЮ МАШИНУ </a>
 
 
+<a href="/cars"> ПОКАЗАТЬ ВЕСЬ СПИСОК МАШИН </a>
+
+<br>
+<br>
+
+    <a href="/cars/new"> СОЗДАТЬ НОВУЮ МАШИНУ </a>
+
+    </div>
 
 <!--<div th:each="person : ${people}">-->
 <!--    <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">User</a>-->

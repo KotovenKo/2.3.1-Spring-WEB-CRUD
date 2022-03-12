@@ -5,19 +5,21 @@
   <title>Cars by Counter</title>
 </head>
 <body>
-<h2>Список автомобилей</h2>
+<h2 align="center">Список автомобилей</h2>
 <br/>
 <div>
-  <table th:border="1">
+  <table style="margin: 0 auto; border: solid 1px blue;">
     <tr>
-      <th> ID</th>
-      <th> First Name</th>
-      <th> Second Name</th>
+      <th width="50" align="left"> ID</th>
+      <th width="150" align="left"> Model</th>
+      <th width="100" align="left"> Color</th>
+      <th width="50" align="left"> Power</th>
     </tr>
     <tr th:each="car : ${cars}">
-      <td th:text="${car.getId()}"></td>
-      <td th:text="${car.getModel()}"></td>
-      <td th:text="${car.getColor()}"></td>
+      <td  width="50" th:text="${car.getId()}"></td>
+      <td  width="150" th:text="${car.getModel()}"></td>
+      <td  width="100" th:text="${car.getColor()}"></td>
+      <td  width="50" th:text="${car.getPower()}"></td>
 
     </tr>
   </table>
