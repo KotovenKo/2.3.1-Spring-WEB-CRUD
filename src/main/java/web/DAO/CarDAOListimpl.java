@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class CarDAOListimpl implements CarDAO {
+public class CarDAOListimpl {
 
     private int counterCars;
     private List<Car> cars;
@@ -19,17 +19,17 @@ public class CarDAOListimpl implements CarDAO {
         cars.add(new Car(++counterCars, "MERS", "yello"));
         cars.add(new Car(++counterCars, "MITSU", "purple"));
     }
-    @Override
+   // @Override
     public List<Car> getCars() {
         return cars;
     }
 
-    @Override
+   // @Override
     public void addCar(Car car) {
         cars.add(car);
     }
 
-    @Override
+   // @Override
     public List<Car> getNumberOfCars(int counter) {
         if (counter > cars.size()) {
             counter = cars.size();

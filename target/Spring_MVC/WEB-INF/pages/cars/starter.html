@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<h2>Добро пожаловать на страницу подбора автомобилей!!!</h2>
+<br/>
+
+Сколько машин вывести в список?
+<br/>
+<br/>
+<form th:action="@{/cars/carbycounter}">
+    <input type="text" th:name="counter"/>
+    <input type="submit"/>
+</form>
+<br>
+
+Можно вывести
+<a href="/cars"> ВЕСЬ СПИСОК МАШИН </a>
+<br>
+<br>
+Либо можно  <a href="/cars/new"> СОЗДАТЬ НОВУЮ МАШИНУ </a>
+
+
+
+<!--<div th:each="person : ${people}">-->
+<!--    <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">User</a>-->
+
+<!--</div>-->
+
+</body>
+</html>

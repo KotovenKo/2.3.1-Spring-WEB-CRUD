@@ -6,7 +6,7 @@ import web.model.Car;
 
 import java.util.List;
 
-@Component
+
 public interface CarService {
 
     List<Car> getCars();
