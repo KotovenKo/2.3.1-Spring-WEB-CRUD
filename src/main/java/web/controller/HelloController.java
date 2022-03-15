@@ -22,10 +22,9 @@ public class HelloController {
 		return "index";
 	}
 
-
 	@GetMapping("/")
-	public String starter(Model model){
-		return "cars/starter";
+	public String starter(Model model) {
+		return "users/starter";
 	}
-	
+
 }

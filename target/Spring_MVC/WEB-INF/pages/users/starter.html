@@ -6,13 +6,13 @@
 </head>
 <body>
 <div style='text-align:center; width:100%'>
-<h2 >Добро пожаловать на страницу подбора автомобилей!!!</h2>
+<h2 >Добро пожаловать!</h2>
 <br/>
 
-<p>Сколько машин вывести в список?<p/>
+<p>Сколько пользователей вывести в список?<p/>
 
 
-<form th:action="@{/cars/carbycounter}">
+<form th:action="@{/users/usersbycounter}">
     <input type="text" th:name="counter"/>
     <input type="submit"/>
 </form>
@@ -20,12 +20,12 @@
 
 
 
-<a href="/cars"> ПОКАЗАТЬ ВЕСЬ СПИСОК МАШИН </a>
+<a href="/users"> ПОКАЗАТЬ ВЕСЬ СПИСОК ПОЛЬЗОВАТЕЛЕЙ </a>
 
 <br>
 <br>
 
-    <a href="/cars/new"> СОЗДАТЬ НОВУЮ МАШИНУ </a>
+    <a href="/users/new"> СОЗДАТЬ НОВОГО ПОЛЬЗОВАТЕЛЯ </a>
 
     </div>
 
